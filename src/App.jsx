@@ -3,10 +3,9 @@ import { useState } from "react";
 
 function Score({ date, score }) {
   return (
-    <div>
-      <p>Date: {date}</p>
-      <p>Score: {score}</p>
-    </div>
+    <li>
+      <p>Date: {date} ----- Score: {score}</p>
+    </li>
   );
 }
 
@@ -19,9 +18,12 @@ function Learner({learner}) {
       <h2>{learner.name}</h2>
       <p>Bio: {learner.bio}</p>
       <h3>Scores:</h3>
-      {scores.map((scores, index) => (
-        <Score key={index} date={scores.date} score={scores.score} />
-      ))}
+      <ul>
+        {scores.map((scores, index) => (
+          <Score key={index} date={scores.date} score={scores.score} />
+        ))}
+      </ul>
+      
     </div>
   );
 }
