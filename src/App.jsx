@@ -10,9 +10,9 @@ function Score({ date, score }) {
 }
 
 function Learner({learner}) {
-  console.log(learner)
+  // console.log(learner)
   let scores = learner.scores;
-  console.log(scores)
+  // console.log(scores)
   return (
     <div>
       <h2>{learner.name}</h2>
